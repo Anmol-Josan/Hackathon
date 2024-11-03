@@ -41,9 +41,17 @@ h1 {
 }
 
 @keyframes headerGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 p {
@@ -51,7 +59,13 @@ p {
 }
 
 main {
+    display: flex;
     padding: 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .info,
@@ -60,6 +74,21 @@ main {
     border-radius: 8px;
     margin-bottom: 20px;
     transition: transform 0.3s;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .info,
+    .register {
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .info,
+    .register {
+        width: 60%;
+    }
 }
 
 .info {
@@ -107,4 +136,7 @@ footer {
     padding: 20px;
     background-color: #1f1f1f;
     border-top: 2px solid #00bcd4;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
