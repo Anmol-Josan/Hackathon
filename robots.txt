@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Block certain paths if needed
+Disallow: /temp/
+Disallow: /draft/
+
+# Crawl-delay settings for specific bots
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: bingbot
+Crawl-delay: 1
+
+User-agent: *
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://eastsidehacks.netlify.app/sitemap.xml
